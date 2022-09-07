@@ -1,0 +1,28 @@
+{
+  "name": "node-ts-typeorm",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:joaocarlosribeirojr/node-ts-typeorm.git",
+  "author": "John <jr_indio@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev -r dotenv/config --transpile-only src/server.ts",
+    "typeorm": "ts-node -r dotenv/config ./node_modules/.bin/typeorm",
+    "typeorm:migration:run": "ts-node -r dotenv/config ./node_modules/.bin/typeorm migration:run -d ./src/database/data-source.ts",
+    "typeorm:migration:revert": "ts-node -r dotenv/config ./node_modules/.bin/typeorm migration:revert -d ./src/database/data-source.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "pg": "^8.7.3",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.7",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/uuid": "^8.3.4",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.4"
+  }
+}
